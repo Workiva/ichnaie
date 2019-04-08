@@ -3,6 +3,7 @@
 <!-- toc -->
 
 - [Overview](#overview)
+- [API Documentation](#api-documentation)
 - [Clojure tools](#clojure-tools)
   * [`*tracing-enabled*`](#tracing-enabled)
   * [`enable-tracing!`](#enable-tracing)
@@ -28,6 +29,10 @@ This repo contains a handful of Clojure utilities for easing project integration
 The primary dependencies of this library are [Clojure](https://clojure.org/) (1.9.0-alpha-17) and [OpenTracing API](https://github.com/opentracing/opentracing-java/releases/tag/release-0.16.0) (0.16.0). It also pulls in [utiliva](https://github.com/Workiva/utiliva), [recide](https://github.com/Workiva/recide), and [potemkin](https://github.com/ztellman/potemkin).
 
 This library maintains two thread-local stacks (via Clojure's [dynamic var](https://clojure.org/reference/vars)), one for the current tracer and the other for the current span. Pushing to and popping from the stack is accomplished with [`binding`](https://clojuredocs.org/clojure.core/binding).
+
+## API Documentation
+
+[Clojure API documentation can be found here.](/documentation/clojure/index.html)
 
 ## Clojure tools
 
