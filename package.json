@@ -1,0 +1,24 @@
+{
+  "name": "ichnaie",
+  "version": "0.1.0",
+  "description": "A handful of Clojure utilities for easing project integration with the OpenTracing API",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Workiva/ichnaie.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Workiva/ichnaie/issues"
+  },
+  "homepage": "https://github.com/Workiva/ichnaie#readme",
+  "dependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}
