@@ -155,4 +155,4 @@
             (fn [bodies]
               (for [[args body] (zipmap (:argslists fn-form) bodies)]
                 (let [trace-str (format "%s:%s" trace-str-prefix (pr-str args))]
-                                    `((tracing ~trace-str ~@body))))))))
+                  `((tracing ~trace-str ~@body))))))))

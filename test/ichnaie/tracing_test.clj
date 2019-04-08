@@ -34,13 +34,13 @@
   ([s]
    (reify Tracer$SpanBuilder
      (^Tracer$SpanBuilder asChildOf [this ^Span span]
-      this)
+       this)
      (start [this]
        (mock-span s))))
   ([s a]
    (reify Tracer$SpanBuilder
      (^Tracer$SpanBuilder asChildOf [this ^Span span]
-      this)
+       this)
      (start [this]
        (mock-span s a)))))
 
@@ -166,8 +166,8 @@
 
 (deftest morphe-integration
   (is
-    (try
-      (m/defn ^{::m/aspects [core/traced]} test [] nil)
-      (catch Exception _
-        false))))
+   (try
+     (m/defn ^{::m/aspects [core/traced]} test [] nil)
+     (catch Exception _
+       false))))
 
