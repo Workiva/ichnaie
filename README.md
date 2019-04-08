@@ -1,20 +1,20 @@
-# Ichnaie
+# Ichnaie [![Clojars Project](https://img.shields.io/clojars/v/com.workiva/ichnaie.svg)](https://clojars.org/com.workiva/ichnaie) [![CircleCI](https://circleci.com/gh/Workiva/ichnaie/tree/master.svg?style=svg)](https://circleci.com/gh/Workiva/ichnaie/tree/master)
 
 <!-- toc -->
 
-  * [Overview](#overview)
-  * [Clojure tools](#clojure-tools)
-    + [`*tracing-enabled*`](#tracing-enabled)
-    + [`enable-tracing!`](#enable-tracing)
-    + [`disable-tracing!`](#disable-tracing)
-    + [`set-global-tracer!`](#set-global-tracer)
-    + [`with-tracer`](#with-tracer)
-    + [`tracing`](#tracing)
-    + [`tracing-with-spanbuilder`](#tracing-with-spanbuilder)
-    + [`tracing-with-span`](#tracing-with-span)
-  * [Thread Boundaries](#thread-boundaries)
-  * [morphe integration](#morphe-integration)
-  * [Java tool](#java-tool)
+- [Overview](#overview)
+- [Clojure tools](#clojure-tools)
+  * [`*tracing-enabled*`](#tracing-enabled)
+  * [`enable-tracing!`](#enable-tracing)
+  * [`disable-tracing!`](#disable-tracing)
+  * [`set-global-tracer!`](#set-global-tracer)
+  * [`with-tracer`](#with-tracer)
+  * [`tracing`](#tracing)
+  * [`tracing-with-spanbuilder`](#tracing-with-spanbuilder)
+  * [`tracing-with-span`](#tracing-with-span)
+- [Thread Boundaries](#thread-boundaries)
+- [morphe integration](#morphe-integration)
+- [Java tool](#java-tool)
 - [Maintainers and Contributors](#maintainers-and-contributors)
   * [Active Maintainers](#active-maintainers)
   * [Previous Contributors](#previous-contributors)
@@ -138,13 +138,13 @@ The `TracingContext` can be created with a Tracer, a SpanBuilder, or a Span; or 
 
 As with the Clojure macros, an exception is thrown when an attempt is made to create a span in a context that has no tracer defined. `TracingContext.setGlobalTracer(Tracer tracer)` is provided as a static method which simply delegates to the Clojure version.
 
-# Maintainers and Contributors
+## Maintainers and Contributors
 
-## Active Maintainers
+### Active Maintainers
 
 -
 
-## Previous Contributors
+### Previous Contributors
 
 - Timothy Dean <galdre@gmail.com>
 - Alex Alegre <alex.alegre@workiva.com>
