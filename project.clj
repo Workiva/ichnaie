@@ -16,6 +16,8 @@
 
   :deploy-repositories {"clojars"
                         {:url "https://repo.clojars.org"
+                         :username :env/clojars_username
+                         :password :env/clojars_password
                          :sign-releases false}}
 
   :java-source-paths ["java-src"]
@@ -31,6 +33,13 @@
 
   :codox {:metadata {:doc/format :markdown}
           :themes [:rdash]
+          :html {:transforms [[:title]
+                              [:substitute [:title "Ichnaie API Docs"]]
+                              [:span.project-version]
+                              [:substitute nil]
+                              [:pre.deps]
+                              [:substitute [:a {:href "https://clojars.org/com.workiva/ichnaie"}
+                                            [:img {:src "https://img.shields.io/clojars/v/com.workiva/ichnaie.svg"}]]]]}
           :output-path "documentation/clojure"}
 
   :profiles {:dev [{:dependencies [[criterium "0.4.3"]]}]
