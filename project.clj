@@ -9,7 +9,7 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [com.workiva/utiliva "0.1.1"]
-                 [com.workiva/recide "1.0.0"]
+                 [com.workiva/recide "1.0.1"]
                  [io.opentracing/opentracing-api "0.31.0"]
                  [com.workiva/morphe "1.0.0"]
                  [potemkin "0.4.3"]]
