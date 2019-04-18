@@ -5,3 +5,7 @@
 .project
 .settings/
 target/
+/node_modules
+package-lock.json
+_site/
+Gemfile.lock

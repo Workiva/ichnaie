@@ -1,5 +1,28 @@
 # Ichnaie
 
+<!-- toc -->
+
+  * [Overview](#overview)
+  * [Clojure tools](#clojure-tools)
+    + [`*tracing-enabled*`](#tracing-enabled)
+    + [`enable-tracing!`](#enable-tracing)
+    + [`disable-tracing!`](#disable-tracing)
+    + [`set-global-tracer!`](#set-global-tracer)
+    + [`with-tracer`](#with-tracer)
+    + [`tracing`](#tracing)
+    + [`tracing-with-spanbuilder`](#tracing-with-spanbuilder)
+    + [`tracing-with-span`](#tracing-with-span)
+  * [Thread Boundaries](#thread-boundaries)
+  * [morphe integration](#morphe-integration)
+  * [Java tool](#java-tool)
+- [Maintainers and Contributors](#maintainers-and-contributors)
+  * [Active Maintainers](#active-maintainers)
+  * [Previous Contributors](#previous-contributors)
+
+<!-- tocstop -->
+
+## Overview
+
 This repo contains a handful of Clojure utilities for easing project integration with the OpenTracing API. In addition, it contains a simple Java utility for Java applications that wrap a Clojure library employing `ichnaie`. The Java utility could probably be used on its own, but it was designed to enable a Java application to pass tracing information along to a Clojure library with little headache. Finally, we provide a function for integrating tracing into your project via morphe, for a true minimum of fuss and nonsense in Clojure.
 
 The primary dependencies of this library are [Clojure](https://clojure.org/) (1.9.0-alpha-17) and [OpenTracing API](https://github.com/opentracing/opentracing-java/releases/tag/release-0.16.0) (0.16.0). It also pulls in [utiliva](https://github.com/Workiva/utiliva), [recide](https://github.com/Workiva/recide), and [potemkin](https://github.com/ztellman/potemkin).
