@@ -1,4 +1,4 @@
-(defproject com.workiva/ichnaie "0.1.0"
+(defproject com.workiva/ichnaie "0.1.1"
   :description "A handful of Clojure utilities for easing project integration with the OpenTracing API"
   :url "https://github.com/Workiva/ichnaie"
   :license {:name "Apache License, Version 2.0"}
