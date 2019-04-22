@@ -1,11 +1,11 @@
 ;; Copyright 2017-2019 Workiva Inc.
-;; 
+;;
 ;; Licensed under the Apache License, Version 2.0 (the "License");
 ;; you may not use this file except in compliance with the License.
 ;; You may obtain a copy of the License at
-;; 
+;;
 ;;     http://www.apache.org/licenses/LICENSE-2.0
-;; 
+;;
 ;; Unless required by applicable law or agreed to in writing, software
 ;; distributed under the License is distributed on an "AS IS" BASIS,
 ;; WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -131,28 +131,10 @@
   For instance:
   \"clojure.core/+:[x y & more]\""
   [fn-form]
-  (insist (contains? fn-form :arglists)
-          "It appears you may be using an older version of morphe. See mod:traced.")
+  (insist (contains? fn-form :arglists))
   (let [trace-str-prefix (format "%s/%s" (ns-name (:namespace fn-form)) (:fn-name fn-form))]
     (update fn-form :bodies
             (fn [bodies]
               (for [[args body] (map vector (:arglists fn-form) bodies)]
-                (let [trace-str (format "%s:%s" trace-str-prefix (pr-str args))]
-                  `((tracing ~trace-str ~@body))))))))
-
-(defn mod:traced
-  "DEPRECATED. For use with older versions of morphe.
-  This function is designed for use with the morphe library. When triggered,
-  this wraps each fn body with a `tracing` macro using an operation name of the form:
-  <namespace>/<fn-name>:<args-vector>
-  For instance:
-  \"clojure.core/+:[x y & more]\""
-  [fn-form]
-  (insist (contains? fn-form :argslists)
-          "mod:traced is deprecated -- use `traced` with newer versions of morphe.")
-  (let [trace-str-prefix (format "%s/%s" (ns-name (:namespace fn-form)) (:fn-name fn-form))]
-    (update fn-form :bodies
-            (fn [bodies]
-              (for [[args body] (zipmap (:argslists fn-form) bodies)]
                 (let [trace-str (format "%s:%s" trace-str-prefix (pr-str args))]
                   `((tracing ~trace-str ~@body))))))))
