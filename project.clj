@@ -1,4 +1,4 @@
-(defproject com.workiva/ichnaie "0.1.0"
+(defproject com.workiva/ichnaie "0.1.2"
   :description "A handful of Clojure utilities for easing project integration with the OpenTracing API"
   :url "https://github.com/Workiva/ichnaie"
   :license {:name "Apache License, Version 2.0"}
@@ -8,10 +8,10 @@
             [lein-codox "0.10.3"]]
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [com.workiva/utiliva "0.1.1"]
-                 [com.workiva/recide "1.0.0"]
+                 [com.workiva/utiliva "0.2.0"]
+                 [com.workiva/recide "1.0.1"]
                  [io.opentracing/opentracing-api "0.31.0"]
-                 [com.workiva/morphe "1.0.0"]
+                 [galdre/morphe "1.0.1"]
                  [potemkin "0.4.3"]]
 
   :deploy-repositories {"clojars"
