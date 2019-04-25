@@ -33,6 +33,7 @@ This library maintains two thread-local stacks (via Clojure's [dynamic var](http
 ## API Documentation
 
 [Clojure API documentation can be found here.](/documentation/clojure/index.html)
+[Java API documentation can be found here.](/documentation/java/index.html)
 
 ## Clojure tools
 
